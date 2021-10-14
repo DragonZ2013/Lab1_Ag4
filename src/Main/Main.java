@@ -6,8 +6,10 @@ public class Main {
         int[] KeyboardCost1 = {40,35,70,15,45};
         int[] KeyboardCost2 = {15,20,10,35};
         int[] USBCost2 = {20,15,40,15};
+        int[] USBCost3 = {15,45,20};
         System.out.println(aufgabe_1(KeyboardCost1));
         System.out.println(aufgabe_2(KeyboardCost2,USBCost2));
+        System.out.println(aufgabe_3(USBCost2,30));
     }
 
     public static int aufgabe_1(int[] costKeyboard){
@@ -28,7 +30,15 @@ public class Main {
         for(int cost: costUSB)
             if(max_cost<cost)
                 max_cost=cost;
+        return max_cost;
+    }
 
+    public static int aufgabe_3(int[] costUSB,int budget){
+        //returns the highest cost from array under budget
+        int max_cost=costUSB[0];
+        for(int cost: costUSB)
+            if(max_cost<cost&&cost<budget)
+                max_cost=cost;
         return max_cost;
     }
 }
