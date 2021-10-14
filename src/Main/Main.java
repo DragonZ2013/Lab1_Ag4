@@ -4,7 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
         int[] KeyboardCost1 = {40,35,70,15,45};
+        int[] KeyboardCost2 = {15,20,10,35};
+        int[] USBCost2 = {20,15,40,15};
         System.out.println(aufgabe_1(KeyboardCost1));
+        System.out.println(aufgabe_2(KeyboardCost2,USBCost2));
     }
 
     public static int aufgabe_1(int[] costKeyboard){
@@ -16,5 +19,16 @@ public class Main {
         return min_cost;
     }
 
-    
+    public static int aufgabe_2(int[] costKeyboard,int[] costUSB){
+        //returns the highest cost from both arrays
+        int max_cost=costKeyboard[0];
+        for(int cost: costKeyboard)
+            if(max_cost<cost)
+                max_cost=cost;
+        for(int cost: costUSB)
+            if(max_cost<cost)
+                max_cost=cost;
+
+        return max_cost;
+    }
 }
