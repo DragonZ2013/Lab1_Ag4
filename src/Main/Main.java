@@ -21,6 +21,8 @@ public class Main {
 
     public static int aufgabe_1(int[] costKeyboard){
         //returns the lowest cost from the array
+        //Input: int[]
+        //Output: int
         int min_cost=costKeyboard[0];
         for(int cost: costKeyboard)
             if(min_cost>cost)
@@ -30,6 +32,8 @@ public class Main {
 
     public static int aufgabe_2(int[] costKeyboard,int[] costUSB){
         //returns the highest cost from both arrays
+        //Input: int[],int[]
+        //Output: int
         int max_cost=costKeyboard[0];
         for(int cost: costKeyboard)
             if(max_cost<cost)
@@ -42,6 +46,8 @@ public class Main {
 
     public static int aufgabe_3(int[] costUSB,int budget){
         //returns the highest cost from array under budget
+        //Input: int[],int
+        //Output: int
         int max_cost=costUSB[0];
         for(int cost: costUSB)
             if(max_cost<cost&&cost<budget)
@@ -51,6 +57,8 @@ public class Main {
 
     public static int aufgabe_4(int[] costKeyboard,int[] costUSB,int budget){
         //returns the highest cost of 2 added elements from each array, under budget
+        //Input: int[],int[],int
+        //Output: int
         int max_cost=-1;
         for(int cost1: costKeyboard)
             for(int cost2: costUSB)
